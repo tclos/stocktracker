@@ -1,5 +1,7 @@
 # StockTracker Portfolio Manager
 
+This project was developed collaboratively during discipline "Técnicas de Construção de Programas - 2025/1"
+Professor: Karina Kohl
 
 A comprehensive stock portfolio tracking application with performance analytics, benchmark comparisons, and reporting capabilities.
 
