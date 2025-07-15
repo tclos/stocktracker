@@ -1,0 +1,12 @@
+17/05/2025
+
+- Yahoo finance API —> qual a limitação do free tier?
+
+- O requisito RNF-1 está bem-intencionado, mas usa termos vagos e subjetivos como "intuitiva" e "responsiva", 
+o que dificulta a verificação e validação do requisito. 
+Eu devo conseguir medir, mesmo sendo não funcional e tem de ser bem especifico. 
+O que quer dizer ser intuitivo e responsivo no caso do projeto de vocês?
+
+O Luiz Henryque ainda não entrou no grupo no classroom. Não será atribuida nota. Poderá ser atribuída depois da entrada 
+no classroom dependendo da participação nas próximas etapas do trabalho.
+

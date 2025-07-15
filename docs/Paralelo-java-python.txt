@@ -1,0 +1,35 @@
+Em Java, é obrigatório declarar o tipo de retorno de métodos e utilizar modificadores de acesso como private e public para controlar a visibilidade dos atributos e métodos. Já em Python, os atributos são públicos por padrão, mas pode-se indicar encapsulamento utilizando convenções como _atributo (protected) ou __atributo (private).
+	Exemplo em Python: self.api = StockAPI() cria um atributo público. Se quisermos indicar que ele é protegido, poderíamos escrever self._api = StockAPI().
+
+Os construtores em Python são definidos pelo método especial __init__, enquanto em Java o construtor tem o mesmo nome da classe e não possui tipo de retorno.
+	Exemplo em Python: def __init__(self, ticket: str, quantity: int, purchase_date: str = get_current_date()):
+	Em Java: public Stock(String ticket, int quantity, String purchaseDate) {
+
+Em Java, o acesso a atributos geralmente é feito por meio de métodos getters e setters, como uma forma de preservar o encapsulamento. Em Python, embora também seja possível usar propriedades com o decorador @property, muitas vezes o acesso é feito diretamente por simplicidade.
+	Exemplo: em vez de escrever stock.getQuantity() como em Java, o código Python simplesmente acessa stock.quantity.
+
+O parâmetro self em Python representa a instância atual da classe e precisa ser declarado explicitamente nos métodos. Em Java, o equivalente é o uso implícito da palavra-chave this.
+	Exemplo em Python: self.quantity += quantity_purchase dentro de add_purchase. Em Java, seria algo como this.quantity += quantityPurchase;.
+
+Java é uma linguagem estaticamente tipada, o que significa que os tipos das variáveis devem ser declarados e são verificados em tempo de compilação. Python, por outro lado, é dinamicamente tipado, e os tipos são determinados em tempo de execução, com anotações de tipo sendo opcionais e não obrigatórias.
+	Exemplo em Python: self.gain = 0. Em Java: private double gain = 0;
+	Definir os tipos (Opcional): Ex: def __init__(self, ticket: str, quantity: int, purchase_date: str)
+
+Python suporta herança múltipla, permitindo que uma classe herde de mais de uma classe base. Java, por questões de simplicidade e segurança, permite herança de apenas uma classe, mas compensa isso com o uso de interfaces.[
+	Exemplo em Python: class Index(Stock, OutraClasse):
+
+Em Java, há suporte explícito para interfaces e classes abstratas, que permitem definir contratos e comportamentos comuns a várias classes. Python não possui o conceito de interface nativamente, mas oferece funcionalidades semelhantes por meio do módulo abc (Abstract Base Classes), que permite definir classes abstratas e métodos obrigatórios.
+
+Java oferece suporte formal à sobrescrita de métodos (override), inclusive com a anotação @Override. Em Python, não há uma anotação específica para sobrescrita de métodos, mas é possível obter comportamento semelhante por meio da redefinição de métodos em subclasses e, quando necessário, o uso de *args e **kwargs para capturar argumentos genéricos.
+
+Em Python, é comum passar dados em forma de dict e confiar que os objetos tenham os métodos esperados (duck typing). No seu código, os itens retornados por get_yahoo_movers() são acessados como dicionários (item['symbol']), sem necessidade de uma classe StockMover como haveria em Java.
+
+Python usa decoradores para marcar comportamentos especiais, como @app.callback. Em Java, esse papel é cumprido pelas anotações (@Override, @Controller, etc.).
+
+Em Java, para indicar que uma classe pertence a um determinado pacote, utiliza-se a instrução package nome.do.pacote; no início do arquivo. A organização em pacotes é reconhecida automaticamente pelo compilador e pelo sistema de arquivos.
+
+Já em Python, para um diretório ser considerado um pacote, é necessário que ele contenha um arquivo especial chamado __init__.py, mesmo que esteja vazio. Esse arquivo pode também ser usado para controlar quais símbolos são exportados, definir inicializações ou importar módulos de forma centralizada.
+
+Em Java, os imports são feitos com base na estrutura de pacotes e devem ser declarados explicitamente com import. O compilador exige que cada classe esteja em seu próprio arquivo (salvo classes internas), e o nome do arquivo deve corresponder exatamente ao nome da classe pública contida nele.
+
+Em Python, é possível definir múltiplas classes em um mesmo arquivo, e os imports são mais flexíveis, permitindo desde from pacote.modulo import Classe até import pacote.modulo as apelido. Isso proporciona maior liberdade, mas exige mais cuidado com organização manual.
